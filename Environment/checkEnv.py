@@ -51,7 +51,10 @@ def isVirtualEnv() -> bool :
 
 def getInfoormation() -> dict :
 
-    
+    '''
+    Returns the System Information (OS Details, CPU Information, Memory Information) if the device is not a virtual environment.
+    '''
+
     osInfo = platform.uname()
 
     cpuInfo = {
@@ -86,7 +89,7 @@ def getInfoormation() -> dict :
 
 if __name__ == '__main__':
     if isVirtualEnv():
-        print("Virtual Env")
+        print("Virtual Environment Detected. \nGetting back to original behaviour.")
     else:
         detail = getInfoormation()
-        print(detail)
+        print(getInfoormation.__doc__)
