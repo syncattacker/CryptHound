@@ -1,7 +1,6 @@
 #!/usr/bin/env python3
 
 # Library Imports
-
 import os
 import psutil
 import platform
@@ -9,7 +8,6 @@ import subprocess
 
 
 # Check for virtualization environment.
-
 def isVirtualEnv() -> bool :
     '''
     Returns True if executed inside a virtualized environment else False.
@@ -45,10 +43,10 @@ def isVirtualEnv() -> bool :
             except ( subprocess.CalledProcessError, FileNotFoundError ):
                 pass
 
-        return False
-    
+        return False    
 
 
+# Get system information if it's not a virtual environment.
 def getInfoormation() -> dict :
 
     '''
